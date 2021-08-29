@@ -7,8 +7,13 @@
 <h2>GetInfo</h2>
 @using (Html.BeginForm())
 {
-    <input type="text" name="HoTenSV" />
-    <input type="text" name="Tuoi" />
-    <input type="text" name="Lop" />
+    <input type="text" name="HoTenSV" />;
+    <input type="text" name="Tuoi" />;
+    <input type="text" name="Lop" />;
+    <input type="submit" name="Hien Thi Thong tin" />;
 }
-<h3></h3>
+<h2>
+    Thong tin:Ho va Ten:@ViewBag.HoTenSV <br />
+    Tuoi:@ViewBag.Tuoi <br />
+    Lop:@ViewBag.Lop
+</h2>
