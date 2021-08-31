@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("TinhTong","Demo"))
+{
+    <label>Số thứ nhất</label>
+    <input type="text" name="soA" /> 
+    <br />
+    <label>Số thứ hai:</label>
+    <input type="text" name="soB" />
+    <br />
+    <input type="submit" value="TinhTong" />
+}

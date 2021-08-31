@@ -5,30 +5,24 @@ using System.Web;
 using System.Web.Mvc;
 using BaiSo2.Models;
 
-
 namespace BaiSo2.Controllers
 {
+    
     public class DemoController : Controller
     {
-        Giai_Phuong_trinh gpt = new Giai_Phuong_trinh();
+        GiaiPT gpt = new GiaiPT();
         // GET: Demo
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Hello()
-        {
-            return View();
-        }
-        public ActionResult GiaiPTB1()
-        {
-            return View();
-        }
         [HttpPost]
-        public ActionResult GiaiPTB1(double heSoA, double heSoB)
+        public ActionResult TinhTong(string soA, string soB)
         {
-            double x = gpt.GiaiPhuongTrinhBacNhat(heSoA, heSoB);
-            ViewBag.nghiemPT = x;
+            int SoThuNhat = Convert.ToInt32(soA);
+            int SoThuHai = Convert.ToInt32(soB);
+            int TongHaiSo = gpt.TinhTong(SoThuNhat,SoThuHai);
+            ViewBag.Tong = TongHaiSo;
             return View();
         }
     }
